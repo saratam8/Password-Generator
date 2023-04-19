@@ -62,24 +62,18 @@ function writePassword() {
   }
 
   console.log(passwordGen);
-  // var passwordGen2 = [];
-  // for(var i = 0; i < passwordGen.length; i++){
-  //   passwordGen2 = passwordGen2.concat(passwordGen[i]);
-  //   console.log(passwordGen2);
-  // }
 
-  // function generatePassword(){
-  //   var password = [];
-  //   for(var i = 0; i < passwordLength; i++){
-  //     var index1 = Math.floor(Math.random() * arrayIndex1);
-  //     var index2 = Math.floor(Math.random() * arrayIndex2);
-  //     console.log(index1);
-  //     console.log(index2);
-  //     console.log(passwordGen[index1][index2]);
-  //     password[i] = passwordGen[index1][index2];
-  //   }
-  //   console.log(password);
-  // }
+  function generatePassword(){
+    var password = [];
+    for(var i = 0; i < passwordLength; i++){
+      var index = Math.floor(Math.random() * passwordGen.length);
+      password[i] = passwordGen[index];
+    }
+    console.log(password);
+    var passwordString = password.join("");
+    console.log(passwordString);
+    return passwordString;
+  }
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
