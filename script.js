@@ -18,17 +18,15 @@ function writePassword() {
   function getPasswordLength() {
     var passwordLength = window.prompt("Enter character length of password: ");
 
-    console.log(`password length: ${passwordLength}`);
+    // console.log(`password length: ${passwordLength}`);
 
     return passwordLength;
   }
 
   var passwordLength = getPasswordLength();
-  // var checkNum = typeof passwordLength;
-  // console.log(checkNum);
 
   //Check if user input is between 8 and 128. Ask for input until valid response
-  while (passwordLength < 8 || passwordLength > 128) {
+  while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
     window.alert("Password must be between 8 to 128 characters. Please try again.");
     var passwordLength = getPasswordLength();
   }
@@ -37,31 +35,31 @@ function writePassword() {
 
   if (lowercaseChar == true){
     passwordGen = passwordGen.concat(lowercase);
-    console.log(passwordGen);
+    // console.log(passwordGen);
   }
 
   var uppercaseChar = window.confirm("Do you want to include uppercase characters?");
 
   if (uppercaseChar == true){
     passwordGen = passwordGen.concat(uppercase);
-    console.log(passwordGen);
+    // console.log(passwordGen);
   }
 
   var numericChar = window.confirm("Do you want to include numeric characters?");
 
   if (numericChar == true){
     passwordGen = passwordGen.concat(numeric);
-    console.log(passwordGen);
+    // console.log(passwordGen);
   }
 
   var specialChar = window.confirm("Do you want to include special characters?");
 
   if (specialChar == true){
     passwordGen = passwordGen.concat(special);
-    console.log(passwordGen);
+    // console.log(passwordGen);
   }
 
-  console.log(passwordGen);
+  // console.log(passwordGen);
 
   function generatePassword(){
     var password = [];
@@ -69,9 +67,9 @@ function writePassword() {
       var index = Math.floor(Math.random() * passwordGen.length);
       password[i] = passwordGen[index];
     }
-    console.log(password);
+    // console.log(password);
     var passwordString = password.join("");
-    console.log(passwordString);
+    // console.log(passwordString);
     return passwordString;
   }
 
