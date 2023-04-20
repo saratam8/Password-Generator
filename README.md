@@ -3,7 +3,7 @@ This repository contains code for a project in creating a random password genera
 
 
 ## Overview of Site
-
+![gif screenshot of deployed application taking in user input correctly and generating a random password](./screenshot/password_generator_screenshot.gif)
 
 ## Summary
 * Implemented a random password generator using Javascript
