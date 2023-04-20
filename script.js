@@ -1,4 +1,3 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -35,6 +34,7 @@ function writePassword() {
 
   if (lowercaseChar == true){
     passwordGen = passwordGen.concat(lowercase);
+    window.alert("Lowercase characters will be included in password generation");
     // console.log(passwordGen);
   }
 
@@ -42,6 +42,7 @@ function writePassword() {
 
   if (uppercaseChar == true){
     passwordGen = passwordGen.concat(uppercase);
+    window.alert("Uppercase characters will be included in password generation");
     // console.log(passwordGen);
   }
 
@@ -49,6 +50,7 @@ function writePassword() {
 
   if (numericChar == true){
     passwordGen = passwordGen.concat(numeric);
+    window.alert("Numeric characters will be included in password generation");
     // console.log(passwordGen);
   }
 
@@ -56,6 +58,7 @@ function writePassword() {
 
   if (specialChar == true){
     passwordGen = passwordGen.concat(special);
+    window.alert("Special characters will be included in password generation");
     // console.log(passwordGen);
   }
 
